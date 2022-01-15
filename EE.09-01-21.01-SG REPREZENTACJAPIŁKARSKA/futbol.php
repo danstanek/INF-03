@@ -51,26 +51,20 @@
                     </form>
                     <ul>
                     <?php
-                     $connect=mysqli_connect("localhost", "root", "", "egzamin");
-                if (isset($_REQUEST['numerek']) && $_REQUEST['numerek'] != "") {
-                    $qrr = $connect->prepare("SELECT imie, nazwisko FROM zawodnik WHERE pozycja_id = ?");
-                    $qrr->bind_param("i", $_REQUEST['numerek']);
-                    $qrr->execute();
-                    $result = $qrr->get_result();
-                    while ($row = $result->fetch_assoc()) {
-                        $i = $row['imie'];
-                        $n = $row['nazwisko'];
-                        echo "<li>$i $n</li>";
-                    }
-                    mysqli_close($connect);
-                    header("Location: /egzamin2019e14/tn/futbol.php");
-                    exit();
-                }
-               
-                ?>
-                    </ul>
-               
+                    $connect=mysqli_connect("localhost", "root", "", "egzamin");
+                    if(isset($_POST["numerek"]) && empty($_POST["numerek"]) !=TRUE){
+                        $zapytanie2= 'SELECT imie, nazwisko FROM zawodnik WHERE pozycja_id = 3;';
+                        $exe = mysqli_query($connect, $zapytanie2);
+                        while($linia=mysqli_fetch_row($exe)){
+                            echo<<< OTC
+                            <li>$linia[0],$linia[1]</li>
+                            OTC;
 
+                          
+                        }
+                  mysqli_close($connect);   }
+?>
+                    </ul>
         </div>
 
         <div class="prawy">
