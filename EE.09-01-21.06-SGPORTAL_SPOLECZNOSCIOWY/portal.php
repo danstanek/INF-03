@@ -1,26 +1,23 @@
 <!DOCTYPE html>
-<html lang="pl" >
-
+<html lang="pl">
 <head>
-  <meta charset="utf-8">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lista przyjaciół</title>
   <link rel="stylesheet" href="styl.css">
-</head>
+ </head>
 
 <body>
   <div class="banner">
     <h1>Portal Społecznościowy - moje konto</h1>
   </div>
   <main>
-
     <h2>Moje zainteresowania</h2>
-
     <ul>
       <li>muzyka</li>
       <li>film</li>
       <li>komputery</li>
     </ul>
-
     <h2>Moi znajomi</h2>
     <?php
     $conn = mysqli_connect("localhost", "root", "", "dane");
