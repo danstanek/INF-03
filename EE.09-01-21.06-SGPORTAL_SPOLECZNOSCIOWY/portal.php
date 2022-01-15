@@ -51,7 +51,7 @@
 
   <footer>
     <div class="one">
-      Stronę wykonał: Jan Kupczyk
+      Stronę wykonał: DS537
     </div>
 
     <div class="two">
