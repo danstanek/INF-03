@@ -62,7 +62,8 @@
 
                           
                         }
-                  mysqli_close($connect);   }
+                  }
+           mysqli_close($connect); 
 ?>
                     </ul>
         </div>
