@@ -50,15 +50,22 @@
                     <input type="submit" value="Sprawdź">
                     </form>
                     <ul>
-                    <?php
-                    if(isset($_POST["num"]) && empty($_POST["num"]) !=TRUE){
-                        $zapytanie2= 'SELECT imie, nazwisko FROM zawodnik WHERE pozycja_id = 3;';
-                        $exe = mysqli_query($connect, $zapytanie2);
-                        while($linia=mysqli_fetch_row($exe)){
-                            echo '<li>'.$linia[0].' '.$linia[1].'</li>';
-                        }
+                     <?php
+                if (isset($_REQUEST['pozycja']) && $_REQUEST['pozycja'] != "") {
+                    $qrr = $conn->prepare("SELECT imie, nazwisko FROM zawodnik WHERE pozycja_id = ?");
+                    $qrr->bind_param("i", $_REQUEST['pozycja']);
+                    $qrr->execute();
+                    $result = $qrr->get_result();
+                    while ($row = $result->fetch_assoc()) {
+                        $i = $row['imie'];
+                        $n = $row['nazwisko'];
+                        echo "<li>$i $n</li>";
                     }
-?>
+                    mysqli_close($conn);
+                    header("Location: /futbol.php");
+                    exit();
+                }
+                ?>
                     </ul>
                
 
@@ -66,7 +73,7 @@
 
         <div class="prawy">
             <img src="zad1.png" alt="piłkarz">
-            <p>Autor: 02213106230</p>
+            <p>Autor: 022131mmmm</p>
         </div>
     </body>
 </html>
