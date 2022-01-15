@@ -64,6 +64,8 @@
                         }
                   }
            mysqli_close($connect); 
+                         header("Location: ../futbol.php");
+                    exit();
 ?>
                     </ul>
         </div>
