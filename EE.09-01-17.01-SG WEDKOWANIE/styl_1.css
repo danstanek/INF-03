@@ -1,0 +1,53 @@
+styl_1.css
+Wczoraj
+Pon. 09:36
+
+Diruss przesłał(a) 1 element
+Arkusz stylów
+styl_1.css
+*{
+	font-family: Georgia;
+}
+
+#baner{
+	background-color: DodgerBlue;
+	color: #fff;
+	padding: 10px;
+	text-align: center;
+}
+
+#glowny{
+	background-color: LightBlue;
+	padding: 100px;
+}
+
+#lewy{
+	float: left;
+	background-color: DodgerBlue;
+	color: #fff;
+	width: 20%;
+	height: 220px;
+}
+
+#srodek{
+	float: left;
+}
+
+#prawy{
+	float: left;
+}
+
+#srodek, #prawy{
+	background-color: DodgerBlue;
+	color: #fff;
+	width: 40%;
+	height: 220px;
+	text-align: center;
+}
+
+a{
+	border: 1px dashed DimGray;
+	background-color: Gold;
+	color: DarkRed;
+	padding: 10px;
+}
