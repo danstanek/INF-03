@@ -1,0 +1,46 @@
+karta.html
+Wczoraj
+Pon. 09:36
+
+Diruss przesłał(a) 1 element
+HTML
+karta.html
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<link rel="stylesheet" href="styl_1.css" />
+		<meta charset="UTF-8" />
+		<title>Karty wędkarskie</title>
+	</head>
+	<body>
+		<header id="baner">
+			<h2>Zgłoszenie na kartę wędkarską</h2>
+		</header>
+		<section id="glowny">
+			<h4>Formularz - karta wędkarska</h4>
+			<form action="zapisz.php" method="POST">
+				<p>imię:</p><input type="text" name="imie" />
+				<p>nazwisko:</p><input type="text" name="nazwisko" />
+				<p>tekst:</p><input type="text" name="tekst" size="30" />
+				<p><input type="reset" value="CZYŚĆ" />
+				<input type="submit" value="ZAPISZ" /></p>
+			</form>
+		</section>
+		<section id="lewy">
+			<h4>Typy łowisk</h4>
+			<ul>
+				<li>Zalewy</li>
+				<li>Stawy</li>
+				<li>Jeziora</li>
+				<li>Rzeki</li>
+			</ul>
+		</section>
+		<section id="srodek">
+			<img src="wedka.jpg" alt="karta wędkarska" />
+		</section>
+		<section id="prawy">
+			<p>Stronę przygotował: 0000</p>
+			<a href="http://www.kartawedkarska.pl/">Karta wędkarska</a>
+		</section>
+	</body>
+</html>
