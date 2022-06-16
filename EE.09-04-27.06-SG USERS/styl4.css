@@ -1,1 +1,27 @@
-
+*{
+    font-family: Helvetica;
+}
+#baner,#stopka{
+    height: 20px;
+    color: white;
+    text-align: center;
+    background-color:#aa4949;
+}
+#stopka{
+    clear: both;
+}
+#lewy, #prawy{
+    float: left;
+    background-color:  #db6161; 
+    height: 650px;    
+    width: 50%;
+}
+h3{
+    margin: 0px;
+}
+input[type=submit]{
+    padding: 5px;
+    margin: 20px;
+    background-color: #aa4949; 
+    color: white;
+}
