@@ -1,0 +1,4 @@
+1.INSERT INTO Odpowiedzi VALUES (NULL, 1, 5, "Przyda Ci się wysoki stół, na którym postawisz pieska");
+2.SELECT nick, (YEAR(CURDATE()) - rejestracja) AS latNaForum FROM konta WHERE nick IN ("Jacek", "Tomek", "Monika");
+3.SELECT nick, postow, pytanie FROM konta JOIN pytania ON konta.id = pytania.konta_id WHERE pytania.id = 1;
+4.SELECT Odpowiedzi.id, odpowiedz, nick FROM Odpowiedzi JOIN konta ON konta.id = Odpowiedzi.konta_id WHERE Pytania_id = 1;
