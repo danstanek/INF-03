@@ -1,0 +1,8 @@
+kw1:
+SELECT imie,nazwisko,miasto FROM klient WHERE miasto IN ("Legionowo","Warszawa");
+kw2:
+SELECT nazwa FROM produkty WHERE cena_brutto > 500;
+kw3:
+SELECT nazwa_kategorii,AVG(produkty.cena_brutto) as srednia_cena_brutto FROM kategorie INNER JOIN produkty ON kategorie.id_kat = produkty.id_kat GROUP BY nazwa_kategorii;
+kw4:
+SELECT id_zam,ilosc,wartosc,produkty.nazwa FROM zamowienia INNER JOIN produkty ON zamowienia.id_prod = produkty.id_prod WHERE id_klient=2;
