@@ -1,0 +1,49 @@
+.kontener-glowny{
+    background-color: linen;
+    width: 90%;
+    font-family: Helvetica, sans-serif;
+    color: #222;
+    margin: auto;
+
+}
+.banner{
+    background-color: black;
+    color: white;
+    width: 50%;
+    height: 100px;
+    float: left;
+}
+.glowny-kontent{
+    clear: both;
+    padding: 20px;
+
+}
+.stopka{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+
+}
+table{
+    margin: 40px;
+}
+td{
+    padding: 30px;
+    text-align: center;
+    font-weight: bold;
+
+}
+li{
+    display: inline-block;
+    padding: 5px;
+    margin: 10px;
+    border-bottom: 1px solid white;
+}
+a{
+    color: #aaa;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+}
