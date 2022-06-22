@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl2.css">
+    <title>Pomocnik CSS</title>
+</head>
+
+<body>
+    <div class="kontener-glowny">
+        <div class="banner">
+            <h1>Pomocnik CSS</h1>
+        </div>
+        <div class="banner">
+            <ul>
+                <li>
+                    <a href="kolory.html">Kolory</a>
+                </li>
+                <li>
+                    <a href="czcionki.html">Czcionki</a>
+                </li>
+                <li>
+                    <a href="style.html">Style CSS</a>
+                </li>
+                <li>
+                    <a href="https://www.w3schools.com/css/" target="_blank">Pomoc</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="glowny-kontent">
+            <h2>Podaj składową H koloru w kodzie HSL</h2>
+            <p>0 do 30 czerwienie do 60 żołcie, do 150 zielenie, do 250 niebieskie, do 360 fiolet i prpura</p>
+            <img src="kolory.jpg" alt="Przestrzeń barw HSL"><br>
+            <input id="kolor" type="number" placeholder="0 - 360" max="360" />
+            <button onclick="zmienKolor()">Generuj palete</button>
+            <table>
+                <tr>
+                    <td id="c1" colspan="4">Kolor główny</td>
+                </tr>
+                <tr>
+                    <td id="c2">Kolor 2</td>
+                    <td id="c3">Kolor 3</td>
+                    <td id="c4">Kolor 4</td>
+                    <td id="c5">Kolor 5</td>
+                </tr>
+            </table>
+        </div>
+        <div class="stopka">
+            <p>Autor: 000000000000000</p>
+        </div>
+    </div>
+    <script>
+        let el1 = document.getElementById("c1")
+        let el2 = document.getElementById("c2")
+        let el3 = document.getElementById("c3")
+        let el4 = document.getElementById("c4")
+        let el5 = document.getElementById("c5")
+
+        function zmienKolor() {
+            let wartosc = document.getElementById("kolor").value
+            el1.style.backgroundColor = 'hsl(' + wartosc + ',100%,50%)';
+            el2.style.backgroundColor = 'hsl(' + wartosc + ',80%,50%)';
+            el3.style.backgroundColor = 'hsl(' + wartosc + ',60%,50%)';
+            el4.style.backgroundColor = 'hsl(' + wartosc + ',40%,50%)';
+            el5.style.backgroundColor = 'hsl(' + wartosc + ',20%,50%)';
+        }
+    </script>
+</body>
+
+</html>S
