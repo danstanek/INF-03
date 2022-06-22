@@ -11,7 +11,7 @@
     <header id="baner"><h1>Forum miłośników psów</h1></header>
     <main>
         <section id="lewy">
-            <img src="avatar.png" alt="Użytkownik forum">
+            <img src="Avatar.jpg" alt="Użytkownik forum">
             <?php 
                 $connect = mysqli_connect("localhost", "root", "", "forumpsy");
 
