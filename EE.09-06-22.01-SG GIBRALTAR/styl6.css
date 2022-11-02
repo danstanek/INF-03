@@ -1,0 +1,61 @@
+* {
+    font-family: Georgia;
+    margin: 0 auto;
+}
+
+#left {
+    background-color: maroon;
+    color: white;
+    height: 600px;
+    width: 30%;
+    float: left;
+}
+
+.right {
+    background-color: maroon;
+    color: white;
+    height: 600px;
+    width: 70%;
+    overflow: auto;
+    float: left;
+}
+
+footer {
+    background-color: dimgray;
+    color: white;
+    clear: both;
+}
+
+.right * {
+    float: left;
+}
+
+.right p {
+    float: left;
+}
+
+p {
+    padding: 10px;
+    clear: both;
+}
+
+li {
+    clear: both;
+}
+
+img {
+    padding: 10px;
+    border: solid 1px white;
+}
+
+#indigo {
+    background-color: indigo;
+}
+
+#steelblue {
+    background-color: steelblue;
+}
+
+#olive {
+    background-color: olive;
+}
