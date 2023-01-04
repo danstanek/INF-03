@@ -33,7 +33,7 @@ echo<<<FFF
 <p> ostatni wpis $row[2]</p>
 </div>
 <div id="linia"><hr></div>
-FFF
+FFF;
 
 }
 
