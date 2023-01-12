@@ -1,0 +1,36 @@
+body {
+	box-sizing: border-box;
+	margin: 0;
+	font-family: Garamond;
+	color: white;
+	text-align: center;
+}
+#baner,
+#stopka {
+	background: ForestGreen;
+	padding: 10px;
+	clear: both;
+}
+#lewy,
+#prawy {
+	background: ForestGreen;
+	height: 490px;
+	width: 25%;
+	font-size: 30px;
+	float: left;
+}
+#srodkowy {
+	background: Chocolate;
+	height: 490px;
+	width: 50%;
+	font-size: 25px;
+	float: left;
+}
+#srodkowy img {
+	width: 150px;
+	height: 150px;
+	border-radius: 100%
+}
+input, button {
+	color: green;
+}
