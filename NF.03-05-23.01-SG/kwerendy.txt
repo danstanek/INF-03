@@ -1,1 +1,5 @@
-
+ALTER table zadania convert to character set utf8mb4 collate utf8mb4_unicode_ci;
+SELECT dataZadania, wpis FROM `zadania` WHERE miesiac='sierpień';
+SELECT miesiac, rok FROM zadania WHERE dataZadania = '2020-08-07';
+SELECT miesiac, COUNT(*) As 'liczba weterynarzy' FROM zadania WHERE wpis LIKE 'Weterynarz%' GROUP BY miesiac;
+UPDATE zadania SET wpis='Wycieczka: Zalew Mietkowski' WHERE dataZadania="2020-08-09";
