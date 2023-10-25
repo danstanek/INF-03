@@ -1,0 +1,4 @@
+SELECT id, dataWyjazdu, cel, cena FROM wycieczki WHERE dostepna = 
+SELECT nazwaPliku, podpis FROM zdjecia ORDER BY podpis DESC
+SELECT wycieczki.cel, wycieczki.cena, zdjecia.podpis FROM wycieczki, zdjecia WHERE wycieczki.zdjecia_id = zdjecia.id AND wycieczki.cena > 1200
+ALTER TABLE wycieczki ADD COLUMN liczbaDni INT UNSIGNED AFTER dataWyjazdu
