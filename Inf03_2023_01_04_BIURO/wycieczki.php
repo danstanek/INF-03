@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Wycieczki po Europie</title>
-    <link rel="stylesheet" href="styl.css">
+    <link rel="stylesheet" href="styl4.css">
 </head>
 
 <body>
