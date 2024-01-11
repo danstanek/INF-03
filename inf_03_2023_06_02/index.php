@@ -6,18 +6,12 @@
     <title>Hurtownia Szkolna</title>
     <link rel="stylesheet" href="styl.css">
 </head>
-
-
 <body>
-
 <header>
 <h1>Hurtownia z najlepszymi cenami</h1>
 </header>
-
 <div class="lewy">
-
 <h2>Nasze ceny</h2>
-
 <table>
  
 <?php
@@ -35,11 +29,7 @@ while($row = mysqli_fetch_array($result)) {
 
 mysqli_close($conn);
 
-
-
-
 ?>
-
 
 </table>
 
@@ -79,8 +69,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 ?>
 
-
-
 </form>
 
 </div>
@@ -91,11 +79,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <p><a href="hurt@poczta2.pl">hurt@poczta2.pl</a></p>
 
 </div>
-
-
-
 <footer>
-<h4>Witryne wykonał: Jan Paweł 2137</h4>
+<h4>Witryne wykonał: </h4>
 </footer>
 
 
