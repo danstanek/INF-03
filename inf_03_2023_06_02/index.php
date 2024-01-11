@@ -66,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo "wartość zakupów: ".$result;
 
     }
-
+mysqli_close($conn);
 ?>
 
 </form>
@@ -76,7 +76,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <h2>Kontakt</h2>
 <img src="zakupy.png" alt="hurtownia">
-<p><a href="hurt@poczta2.pl">hurt@poczta2.pl</a></p>
+<p>e-mail: <a href="mailto:hurt@poczta2.pl">hurt@poczta2.pl</a></p>
 
 </div>
 <footer>
