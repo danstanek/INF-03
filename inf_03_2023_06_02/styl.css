@@ -1,0 +1,58 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+footer, header {
+    background-color: #4BA3C7;
+    color: white;
+    height: 80px;
+    font-size: 120%;
+    clear: both;
+}
+
+.lewy, .prawy {
+    background-color: #EFEFEF;
+    height: 400px;
+    width: 25%;
+    float: left;
+}
+
+.srodkowy {
+    background-color: #90CAF9;
+    height: 400px;
+    width: 50%;
+    float: left;
+}
+
+td {
+    margin-left: 10px;
+    width: 90%;
+    border: #90CAF9 1px solid;
+}
+
+table {
+    margin-left: 10px;
+    width: 90%;
+    border: #90CAF9 1px solid;
+}
+
+td {
+    margin-left: 10px;
+    width: 90%;
+    border: #90CAF9 1px solid;
+}
+
+
+table {
+    margin-left: 10px;
+    width: 90%;
+    border: #90CAF9 1px solid;
+}
+
+input {
+    margin-top:15px;
+    margin-bottom:15px;
+}
+
+
