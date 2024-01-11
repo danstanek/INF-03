@@ -25,23 +25,6 @@ footer, header {
     float: left;
 }
 
-td {
-    margin-left: 10px;
-    width: 90%;
-    border: #90CAF9 1px solid;
-}
-
-table {
-    margin-left: 10px;
-    width: 90%;
-    border: #90CAF9 1px solid;
-}
-
-td {
-    margin-left: 10px;
-    width: 90%;
-    border: #90CAF9 1px solid;
-}
 
 
 table {
@@ -50,9 +33,12 @@ table {
     border: #90CAF9 1px solid;
 }
 
-input {
-    margin-top:15px;
-    margin-bottom:15px;
+td {
+    padding: 5px;
+    border: 1px solid #90caf9;
+}
+tr:hover {
+    color: #90caf9
 }
 
 
