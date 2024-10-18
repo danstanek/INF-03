@@ -1,0 +1,4 @@
+Zapytanie 1: SELECT nazwa FROM wycieczki WHERE poczatek="Muszyna" OR poczatek="Wieliczka";
+Zapytanie 2: SELECT nazwa, opis, poczatek, zrodlo FROM wycieczki JOIN zdjecia ON zdjecia_id = zdjecia.id;
+Zapytanie 3: SELECT COUNT(*) FROM wycieczki;
+Zapytanie 4: ALTER TABLE wycieczki ADD COLUMN ocena INT;
