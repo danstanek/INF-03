@@ -1,37 +1,56 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
+<html lang="pl">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sierpniowy kalendarz</title>
     <link rel="stylesheet" href="styl5.css">
 </head>
+
 <body>
     <header>
-        <section id="baner_1"><h1>Organizer: SIERPIEŃ”</h1></section>
+        <section id="baner_1">
+            <h1>Organizer: SIERPIEŃ</h1>
+        </section>
         <section id="baner_2">
-            <form action="organizer.php" method="POST">
-            <label>Zapisz zdarzenie:</label>
-                <input type="text" name="wpis">
+            <form action="organizer.php" method="post">
+                <label>Zapisz wydarzenie:
+                    <input type="text" name="wpis" />
+                </label>
                 <button name="submit">OK</button>
             </form>
             <?php
-            //połączenie z bazą
-            $con=mysqli_connect('localhost','root','','kalendarz');
-            if (isset($_POST['submit'])){
-                $w=$_POST['wpis'];
-                $q="UPDATE zadania SET wpis='$w' WHERE dataZadania='2020-08-09';";
-                mysqli_query($con,$q);
+            $con = mysqli_connect('localhost', 'root', '', 'kalendarz');
+            if (isset($_POST['submit'])) {
+                $wpis = $_POST['wpis'];
+                $q = "UPDATE zadania SET wpis = '$wpis' WHERE dataZadania = '2020-08-09'";
+                mysqli_query($con, $q);
             }
-       mysqli_close($con);     
             ?>
         </section>
         <section id="baner_3">
-            <img src="./logo2.png" alt="sierpień">
+            <img src="logo2.png" alt="sierpień" />
         </section>
     </header>
-    <main></main>
-    <footer></footer>
-    
+    <main>
+        <?php
+        $con = mysqli_connect('localhost', 'root', '', 'kalendarz');
+        
+        $q = "SELECT dataZadania, wpis FROM zadania WHERE miesiac = 'sierpien'";
+        $res = mysqli_query($con, $q);
+        while ($row = mysqli_fetch_array($res)) {
+            echo "<section class='dzien'>
+                    <h5>$row[0]</h5>
+                    <p>$row[1]</p>
+                </section>";
+        }
+        mysqli_close($con);
+        ?>
+    </main>
+    <footer>
+        <p>Stronę wykonał: Student</p>
+    </footer>
 </body>
+
 </html>
+
