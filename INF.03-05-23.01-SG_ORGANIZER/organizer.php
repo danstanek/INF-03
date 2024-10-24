@@ -10,23 +10,21 @@
     <header>
         <section id="baner_1"><h1>Organizer: SIERPIEŃ”</h1></section>
         <section id="baner_2">
-<form action="organizer.php" method="POST">
-<label>Zapisz zdarzenie:</label>
-    <input type="text" name="wpis">
-    <button name="submit">OK</button>
-</form>
-<?php
-//połączenie z bazą
-$con=mysqli_connect('localhost','root','','kalendarz');
-if (isset($_POST['submit'])){
-    $w=$_POST['wpis'];
-    $q="UPDATE zadania SET wpis='$w' WHERE dataZadania='2020-08-09';";
-    mysqli_query($con,$q);
-}
-
-?>
-
-
+            <form action="organizer.php" method="POST">
+            <label>Zapisz zdarzenie:</label>
+                <input type="text" name="wpis">
+                <button name="submit">OK</button>
+            </form>
+            <?php
+            //połączenie z bazą
+            $con=mysqli_connect('localhost','root','','kalendarz');
+            if (isset($_POST['submit'])){
+                $w=$_POST['wpis'];
+                $q="UPDATE zadania SET wpis='$w' WHERE dataZadania='2020-08-09';";
+                mysqli_query($con,$q);
+            }
+       mysqli_close($con);     
+            ?>
         </section>
         <section id="baner_3">
             <img src="./logo2.png" alt="sierpień">
