@@ -1,0 +1,77 @@
+from random import choice, randint
+ 
+# # # # # # # # # # # # # # # # Punkt 2 # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # Lista  przeciwników # # # # # # # # # # # #
+lista_przeciwnikow = [
+    ['Braum', 2000, 35],  # LoL
+    ['Impostor', 1000, 55],  # Among Us
+    ['Creeper', 50, 500],  # Minecraft
+]
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+ 
+def main():
+  # # # # # # # # # # # # # # # # Punkt 1 # # # # # # # # # # # # # # #
+  # # # # # # # # # # Zmienne nadzorujące rozgrywkę # # # # # # # # # #
+  zycie = 1000  # nasze hp
+  obrazenia = 200 # nasze podstawowe obrażenia
+  ile_pokonanych = 0
+  regeneracja_zycia = 50
+  # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+ 
+  #losowanie przeciwnika
+  # losujemy 1 przeciwnika z listy, to jest jeden losowo wybrany wiersz z tablicy lista_przeciwnikow
+  przeciwnik = choice(lista_przeciwnikow).copy()
+  # przeciwnik[0] - tu mamy nazwe przeciwnika
+  # przeciwnik[1] - tu mamy zycie przeciwnika
+  # przeciwnik[2] - tu mamy obrazenia przeciwnika
+  print(f'Twój nowy przeciwnik to {przeciwnik[0]}. Szykuj się do walki!')
+ 
+  # dopóki mamy punkty życia to gra działa w pętli
+  while zycie > 0:
+ 
+    # wypisanie informacji o przeciwniku, dostępnych akcjach i wybór akcji
+    print(f'{przeciwnik[0]} ma jeszcze {przeciwnik[1]} życia.')
+    print(f'Masz {zycie} życia. Możliwe akcje to:')
+    print(f'z - zwykły atak ({obrazenia} obrażeń)')
+    print(f'r - regeneracja życia o {regeneracja_zycia}');
+    akcja = input('Wybierz literkę odpowiadającą akcji: ')
+    print('\n' * 20)
+ 
+    # # # # # # # # # # # # # # # # Punkt 3 # # # # # # # # # # # # # # #z
+    # # # # # # # # # # # Logika zadawanych obrażeń przeciwnikowi # # # # # # # # # # #
+    if akcja == 'z':
+      przeciwnik[1] -= obrazenia
+      print(f'Zadałeś przeciwnikowi {obrazenia} punktów obrażeń zwykłych')
+    elif akcja == 'r':
+      zycie += regeneracja_zycia
+      print(f'Zregenerowałes {regeneracja_zycia} punktów zycia')
+    else:
+        print('Zły wybór')
+        continue
+    # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+ 
+    # sprawdzamy zycie przeciwnika
+    if przeciwnik[1] > 0:
+      # Przeciwnik żyje, może zadać nam obrażenia
+      # od naszego życia odejmujemy obrazenia przeciwnika
+        zycie -= przeciwnik[2]
+        print(f'Otrzymałeś {przeciwnik[2]} punktów obrażeń')
+    else:
+      # Przeciwnik stracił wszystkie punkty życia
+      # Losujemy nowego przeciwnika
+      ile_pokonanych += 1
+      przeciwnik = choice(lista_przeciwnikow).copy()
+      print('*' * 64)
+      print(f'Zabiłeś potwora. Twój nowy przeciwnik to {przeciwnik[0]}. Szykuj się do walki!')
+      print('*' * 64)
+ 
+    pass  # Koniec pętli while
+ 
+  print('Nikt nie jest niepokonany i ostatecznie poległeś!')
+  #print('Pokonałeś jednak wielu przeciwników! Brawo!')
+  print(f'Pokonałeś jednak {ile_pokonanych} przeciwników! Brawo!')
+  pass  # Koniec funkcji main
+ 
+ 
+if __name__ == '__main__':
+  main()
