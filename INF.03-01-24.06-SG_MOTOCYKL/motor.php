@@ -21,7 +21,7 @@
                 $sql = "SELECT nazwa, opis, poczatek, zrodlo FROM wycieczki JOIN zdjecia ON zdjecia_id = zdjecia.id;";
                 $result = $conn->query($sql);
                 while($row = $result -> fetch_array()) {
-                    echo <<<PANI
+                    echo<<<PANI
                     <div class='terminy'>
                     $row[0], rozpoczyna się w $row[2], <a href='$row[3].jpg'>zobacz zdjęcie</a>;
                     </div>
