@@ -1,5 +1,5 @@
 <?php
-    $conn = new mysqli(hostname: "localhost",username: "root",password: "",database: "kupauto");
+    $conn = new mysqli("localhost","root", "", "kupauto");
 ?>
 
 <!DOCTYPE html>
@@ -65,6 +65,7 @@
                 <button type="submit">Wyszukaj</button>
             </form>
             <?php
+
                 // Skrypt #4
                 if(isset($_POST['lista'])) {
                     $model = $_POST['lista'];
