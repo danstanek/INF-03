@@ -1,0 +1,68 @@
+* {
+    font-family: 'Roboto', 'Serif';
+}
+
+header,nav {
+    background-color: Crimson;
+    color: white;
+    text-align: center;
+    letter-spacing: 5px;
+    word-spacing: 30px;
+    padding: 10px;
+}
+
+#m1 {
+    background-color: MistyRose;
+    height: 300px;
+    padding: 10px;
+    margin: 10px 50px;
+    border: 1px solid Crimson;
+   
+}
+#m1 {
+    box-shadow: 5px 5px 5px Crimson;
+}
+
+#m1 p {
+   text-align: center;
+}
+#m1 img {
+    float: left;
+    height: 100%;
+}
+
+#m2 div,
+#m3 div {
+    background-color: Snow;
+    height: 450px;
+    width: 21%;
+    margin: 1%;
+    text-align: center;
+    border: 1px solid crimson;
+    float: left;
+    box-shadow: 5px 5px 5px darkblue;
+}
+
+#m3 {
+    clear: both;
+}
+
+footer {
+    background-color: Crimson;
+    color: white;
+    clear: both;
+}
+
+img {
+    max-width: 100%;
+}
+
+h4 {
+    font-size: 180%;
+    text-align: center;
+    color: crimson;
+}
+
+a {
+    color: white;
+}
