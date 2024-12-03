@@ -23,10 +23,10 @@
                 $result = $conn->query($sql);
                 while($row = $result -> fetch_array()) {
                     echo<<<Pani
-                    <img src='$row[5]' alt='oferta dnia'>;
-                    <h4>Oferta Dnia: Toyota $row[0]</h4>;
-                    <p>Rocznik: $row[1], przebieg: $row[2], rodzaj paliwa: $row[3]</p>;
-                    <h4>Cena: $row[4]</h4>;
+                    <img src='$row[5]' alt='oferta dnia'>
+                    <h4>Oferta Dnia: Toyota $row[0]</h4>
+                    <p>Rocznik: $row[1], przebieg: $row[2], rodzaj paliwa: $row[3]</p>
+                    <h4>Cena: $row[4]</h4>
                     Pani;
                 }
             ?>
