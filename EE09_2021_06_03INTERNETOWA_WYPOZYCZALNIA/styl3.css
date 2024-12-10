@@ -1,0 +1,31 @@
+.flam{
+    padding:5px;
+    width:226px;
+    height: 280px;
+    float:left;}
+
+ body{
+    font-family: 'verdana';
+ }  
+ #baner1{
+    background-color: aqua;
+    color:white;
+    text-align: center;
+    width:70%;
+    height: 70px;
+    float:left;
+ } 
+ #baner2{
+    background-color: aqua;
+    color:white;
+    text-align: center;
+    width:30%;
+    height: 70px;
+    float:left;
+ } 
+ #polecamy, #film{
+    background-color: aquamarine;
+    height:320px;
+    overflow: scroll;
+    clear:both;
+ }
