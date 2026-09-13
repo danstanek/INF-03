@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kursy komputerowe</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <img src="baner.png" alt="kursy komputerowe">
+        </header>
+
+        <nav>
+            <a href="index.html">Strona główna</a>
+            <a href="raty.html">Koszt rat</a>
+            <a href="https://moje-szkolenia.pl/">Nasz partner</a>
+        </nav>
+
+        <main>
+            <h3>Oblicz miesięczną ratę</h3>
+            <input type="checkbox" name="react" id="react" class="kontrolki"><label for="react">Kurs React.js</label><br>
+            <input type="checkbox" name="js" id="js" class="kontrolki"><label for="js">Kurs JavaScript</label><br>
+            <label for="raty">Liczba rat: </label> <input type="number" name="raty" id="raty" class="kontrolki"><br>
+            <select name="miasto" id="miasto" class="kontrolki">
+                <option value="Warszawa">Warszawa</option>
+                <option value="Katowice">Katowice</option>
+                <option value="Gdańsk">Gdańsk</option>
+            </select><br>
+            <button onclick="Oblicz()" class="kontrolki">Oblicz</button><br>
+            <p id="wynik"></p>
+        </main>
+
+        <footer>
+            <p>Autor strony: <a href="https://ee-informatyk.pl/" target="_blank" style="text-decoration: none;color: unset;">EE-Informatyk.pl</a></p>
+        </footer>
+
+        <script>
+            function Oblicz() {
+                const kursReact = document.getElementById('react').checked;
+                const kursJS = document.getElementById('js').checked;
+                const liczbaRat = parseInt(document.getElementById('raty').value);
+                const miasto = document.getElementById('miasto').value;
+                const wynik = document.getElementById('wynik');
+
+                const cenaReact = 5000;
+                const cenaJS = 3000;
+
+                let kwotaCalkowita = 0;
+                if (kursReact) kwotaCalkowita += cenaReact;
+                if (kursJS) kwotaCalkowita += cenaJS;
+
+                if (kwotaCalkowita === 0) {
+                    wynik.textContent = "Wybierz przynajmniej jeden kurs.";
+                    return;
+                }
+                if (isNaN(liczbaRat) || liczbaRat < 1) {
+                    wynik.textContent = `Kurs odbędzie się w ${miasto}. Koszt całkowity: ${kwotaCalkowita} zł.`;
+                    return;
+                }
+
+                const rata = (kwotaCalkowita / liczbaRat).toFixed(2);
+                wynik.textContent = `Kurs odbędzie się w ${miasto}. Koszt całkowity: ${kwotaCalkowita} zł. Płacisz ${liczbaRat} rat po ${rata} zł`;
+            }
+        </script>
+    </body>
+</html>
